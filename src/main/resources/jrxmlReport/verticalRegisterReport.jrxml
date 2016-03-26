@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="verticalRegisterReport" pageWidth="595" pageHeight="842" columnWidth="525" leftMargin="50" rightMargin="20" topMargin="15" bottomMargin="20" uuid="bbc860e7-1c22-4d81-9194-66abea9eb626">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="collegeName" class="java.lang.String"/>
+	<parameter name="collegeAddress" class="java.lang.String"/>
+	<parameter name="collegeLogo" class="java.lang.String"/>
+	<parameter name="datasource" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{SUBREPORT_DIR}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMAGE_PATH" class="java.lang.String"/>
+	<field name="idCardInformationList" class="java.util.List"/>
+	<summary>
+		<band height="124" splitType="Stretch">
+			<subreport>
+				<reportElement x="1" y="1" width="524" height="123" uuid="ed55abda-228a-43fe-b0e0-89308820ccff"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="IMAGE_PATH">
+					<subreportParameterExpression><![CDATA[$P{IMAGE_PATH}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="collegeAddress">
+					<subreportParameterExpression><![CDATA[$P{collegeAddress}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="collegeLogo">
+					<subreportParameterExpression><![CDATA[$P{collegeLogo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="collegeName">
+					<subreportParameterExpression><![CDATA[$P{collegeName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{idCardInformationList})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "verticalRegisterReport_subreport.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

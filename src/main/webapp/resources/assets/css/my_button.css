@@ -1,0 +1,211 @@
+/* input[type=checkbox]:not(old), */
+/* input[type=radio   ]:not(old){ */
+/*   width   : 28px; */
+/*   margin  : 0; */
+/*   padding : 0; */
+/*   opacity : 0; */
+/* } */
+
+/* input[type=checkbox]:not(old) + label, */
+/* input[type=radio   ]:not(old) + label{ */
+/*   display      : inline-block; */
+/*   margin-left  : -28px; */
+/*   padding-left : 28px; */
+/*   background   : url('../../../resources/bootstrap/img/checks.png') no-repeat 0 0; */
+/*   line-height  : 24px; */
+/* } */
+
+/* input[type=checkbox]:not(old):checked + label{ */
+/*   background-position : 0 -24px; */
+/* } */
+
+/* input[type=radio]:not(old):checked + label{ */
+/*   background-position : 0 -48px; */
+/* } */
+
+/* .example{ */
+/*   margin-bottom : 1.5em; */
+/* } */
+
+/* input[type=checkbox]:not(old), */
+/* input[type=radio   ]:not(old){ */
+/*   width     : 2em; */
+/*   margin    : 0; */
+/*   padding   : 0; */
+/*   font-size : 1em; */
+/*   opacity   : 1; */
+/* } */
+
+/* input[type=checkbox]:not(old) + label, */
+/* input[type=radio   ]:not(old) + label{ */
+/*   display      : inline-block; */
+/* /*   margin-left  : -2em; */
+* /
+	/* /*   line-height  : 1.5em; */ * /
+	/* } */
+	/* input[type=checkbox]:not(old) + label > span, */
+	/* input[type=radio   ]:not(old) + label > span{ */
+	/*   display          : inline-block; */
+	/*   width            : 0.875em; */
+	/*   height           : 0.875em; */
+	/*   margin           : 0.25em 0.5em 0.25em 0.25em; */
+	/*   border           : 0.0625em solid rgb(192,192,192); */
+	/*   border-radius    : 0.25em; */
+	/*   background       : rgb(224,224,224); */
+	/*   background-image :    -moz-linear-gradient(rgb(240,240,240),rgb(224,224,224)); */
+	/*   background-image :     -ms-linear-gradient(rgb(240,240,240),rgb(224,224,224)); */
+	/*   background-image :      -o-linear-gradient(rgb(240,240,240),rgb(224,224,224)); */
+	/*   background-image : -webkit-linear-gradient(rgb(240,240,240),rgb(224,224,224)); */
+	/*   background-image :         linear-gradient(rgb(240,240,240),rgb(224,224,224)); */
+	/*   vertical-align   : bottom; */
+	/* } */
+	/* input[type=checkbox]:not(old):checked + label > span, */
+	/* input[type=radio   ]:not(old):checked + label > span{ */
+	/*   background-image :    -moz-linear-gradient(rgb(224,224,224),rgb(240,240,240)); */
+	/*   background-image :     -ms-linear-gradient(rgb(224,224,224),rgb(240,240,240)); */
+	/*   background-image :      -o-linear-gradient(rgb(224,224,224),rgb(240,240,240)); */
+	/*   background-image : -webkit-linear-gradient(rgb(224,224,224),rgb(240,240,240)); */
+	/*   background-image :         linear-gradient(rgb(224,224,224),rgb(240,240,240)); */
+	/* } */
+	/* input[type=checkbox]:not(old):checked + label > span:before{ */
+	/*   content     : '✓'; */
+	/*   display     : block; */
+	/*   width       : 1em; */
+	/*   color       : rgb(153,204,102); */
+	/*   font-size   : 0.875em; */
+	/*   line-height : 1em; */
+	/*   text-align  : center; */
+	/*   text-shadow : 0 0 0.0714em rgb(115,153,77); */
+	/*   font-weight : bold; */
+	/* } */
+	/* input[type=radio]:not(old):checked +  label > span > span{ */
+	/*   display          : block; */
+	/*   width            : 0.5em; */
+	/*   height           : 0.5em; */
+	/*   margin           : 0.125em; */
+	/*   border           : 0.0625em solid rgb(115,153,77); */
+	/*   border-radius    : 0.125em; */
+	/*   background       : rgb(153,204,102); */
+	/*   background-image :    -moz-linear-gradient(rgb(179,217,140),rgb(153,204,102)); */
+	/*   background-image :     -ms-linear-gradient(rgb(179,217,140),rgb(153,204,102)); */
+	/*   background-image :      -o-linear-gradient(rgb(179,217,140),rgb(153,204,102)); */
+	/*   background-image : -webkit-linear-gradient(rgb(179,217,140),rgb(153,204,102)); */
+	/*   background-image :         linear-gradient(rgb(179,217,140),rgb(153,204,102)); */
+	/* } */
+	/* input[type=checkbox]:not(old), */
+	/* input[type=radio   ]:not(old){ */
+	/*   width   : 28px; */
+	/*   margin  : 0; */
+	/*   padding : 0; */
+	/*   opacity : 0; */
+	/* } */ 
+
+
+.my-bg-success {
+	background: #F5F5F5;
+
+	/* 	background:#FCFCFA; */
+}
+
+.my-bg-info {
+	background: #F5F5F5;
+	/* background:#FCFCFA; */
+}
+
+.my-bg-danger {
+	background: #F5F5F5;
+	/* background:#FCFCFA; */
+}
+
+.my-bg-warning {
+	background: #F5F5F5;
+	/* background:#FCFCFA; */
+}
+
+.lable-set {
+	margin-top: 5px;
+	text-align: right;
+}
+
+@media ( max-width : 767px) {
+.lable-set {
+	text-align: left;
+
+}
+	
+	
+}
+/* Awesome Button  icons */
+.fa-select {
+	width: 40px;
+	font-size: 20px;
+	display: inline-block;
+	/*     color: #FDA425; */
+	color: #ef9d50;
+	text-align: center;
+}
+
+.fa-select:hover {
+	width: 40px;
+	font-size: 21px;
+	display: inline-block;
+	/*    color:#E18603; */
+	color: #ec8526;
+	cursor: default;
+	text-align: center;
+}
+
+.fa-mysave {
+	width: 40px;
+	font-size: 20px;
+	display: inline-block;
+	color: #5CB85C;
+	border-color: #E7923F;
+	text-align: center;
+}
+
+.fa-mysave:hover {
+	width: 40px;
+	font-size: 21px;
+	display: inline-block;
+	color: #48940B;
+	cursor: default;
+	text-align: center;
+}
+
+.fa-myremove {
+	width: 40px;
+	font-size: 20px;
+	display: inline-block;
+	color: #D9534F;
+	border-color: #eea236;
+	text-align: center;
+}
+
+.fa-myremove:hover {
+	width: 40px;
+	font-size: 21px;
+	display: inline-block;
+	color: #BC0808;
+	cursor: default;
+	text-align: center;
+}
+
+ 
+.fa-myprint {
+	width: 40px;
+	font-size: 16px;
+	display: inline-block;
+	color: #D9534F;
+	border-color: #eea236;
+	text-align: center;
+}
+
+.fa-myprint:hover {
+	width: 40px;
+	font-size: 18px;
+	display: inline-block;
+	color: #BC0808;
+	cursor: default;
+	text-align: center;
+}

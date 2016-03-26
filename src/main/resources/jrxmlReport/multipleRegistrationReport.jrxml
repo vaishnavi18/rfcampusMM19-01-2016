@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="multipleRegistrationReport" pageWidth="595" pageHeight="842" columnWidth="525" leftMargin="50" rightMargin="20" topMargin="15" bottomMargin="20" uuid="d1ea96be-5bf9-4e91-a771-eadba682b879">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{SUBREPORT_DIR}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="collegeName" class="java.lang.String"/>
+	<parameter name="collegeAddress" class="java.lang.String"/>
+	<parameter name="collegeSocietyName" class="java.lang.String"/>
+	<parameter name="collegeLogo" class="java.lang.String"/>
+	<parameter name="parameter1" class="java.lang.String"/>
+	<field name="registardStudentList" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="104" splitType="Stretch">
+			<subreport>
+				<reportElement x="1" y="2" width="524" height="100" uuid="d5c71f45-59fd-4b0b-8088-ddabf52886c7"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="collegeSocietyName">
+					<subreportParameterExpression><![CDATA[$P{collegeSocietyName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="collegeAddress">
+					<subreportParameterExpression><![CDATA[$P{collegeAddress}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="collegeName">
+					<subreportParameterExpression><![CDATA[$P{collegeName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="collegeLogo">
+					<subreportParameterExpression><![CDATA[$P{collegeLogo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{registardStudentList})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "multipleRegistrationReport_subreport.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

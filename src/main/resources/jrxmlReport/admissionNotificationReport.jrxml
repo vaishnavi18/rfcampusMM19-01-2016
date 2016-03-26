@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="admissionNotificationReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="08b909c2-17f2-4481-916c-f14ba4e661ff">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="collegeLogo" class="java.lang.String"/>
+	<parameter name="collegeAddress" class="java.lang.String"/>
+	<parameter name="collegeName" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\2jan\\rfcampuspresentation\\src\\main\\resources\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="IMAGE_PATH" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="session" class="java.lang.String"/>
+	<field name="degree" class="java.lang.String"/>
+	<field name="branch" class="java.lang.String"/>
+	<field name="admissionStartDate" class="java.util.Date"/>
+	<field name="admissionEndDate" class="java.util.Date"/>
+	<field name="admissionPrintDate" class="java.util.Date"/>
+	<title>
+		<band height="74" splitType="Stretch">
+			<subreport>
+				<reportElement x="1" y="1" width="554" height="71" uuid="05e81686-f6be-4e1e-93c7-7037623c03bc"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="IMAGE_PATH">
+					<subreportParameterExpression><![CDATA[$P{IMAGE_PATH}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="collegeAddress">
+					<subreportParameterExpression><![CDATA[$P{collegeAddress}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="collegeLogo">
+					<subreportParameterExpression><![CDATA[$P{collegeLogo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="collegeName">
+					<subreportParameterExpression><![CDATA[$P{collegeName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "headerSubreport.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement x="1" y="73" width="555" height="1" uuid="81b81858-d8c0-4951-9959-f7e43b66108c"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="31">
+			<rectangle>
+				<reportElement x="1" y="1" width="554" height="26" backcolor="#009933" uuid="9de54b56-9774-442d-ab66-f98028827050"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="28" y="1" width="192" height="25" forecolor="#FFFFFF" uuid="2cd7f8cb-d5b0-4126-a340-0f90f7897beb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Admission Notification]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="308" y="1" width="60" height="25" forecolor="#FFFFFF" uuid="a06f3dad-5dc0-496b-a07e-a045d59b51e7"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{branch}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="378" y="1" width="100" height="25" forecolor="#FFFFFF" uuid="0dd2f63d-27dc-4995-aab7-16ed5b18f758"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{session}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="301" y="0" width="7" height="26" forecolor="#FFFFFF" uuid="81e60134-8b2e-4e30-bc1e-a492f3ef3bf5"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="369" y="0" width="7" height="26" forecolor="#FFFFFF" uuid="5c971afa-47d9-405c-8575-441c32fd69e9"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="221" y="1" width="80" height="25" forecolor="#FFFFFF" uuid="36f48b81-f8b2-4fae-ad59-515bdf684a10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{degree}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="197" splitType="Stretch">
+			<staticText>
+				<reportElement x="343" y="10" width="79" height="20" uuid="0c31b606-3dc8-4b3e-b62b-0a1b9579ceca"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Publish Date :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="421" y="10" width="116" height="20" uuid="1113758a-146e-42a9-ad7f-c2e37910c93c"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{admissionPrintDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="93" y="50" width="366" height="60" uuid="950eb638-4429-4382-a97a-26edfc792662"/>
+				<textElement textAlignment="Center">
+					<font size="15" isBold="false"/>
+				</textElement>
+				<text><![CDATA[THE ADMISSION NOTIFICATION FOR THE MENTIONED COURCE & SESSION IS STARTING  FROM]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="183" y="109" width="200" height="30" uuid="63c2c544-aa0f-4456-aab6-fa08777d9616"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{admissionStartDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="228" y="138" width="100" height="30" uuid="bbfdd5eb-fd5d-4c56-8392-fe234537904a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[TO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="183" y="167" width="200" height="30" uuid="370c9b0c-2917-4d87-9fd6-23df9c0decb1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{admissionEndDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="313" y="7" width="224" height="50" uuid="6808c318-7123-43ba-8b93-f26004b3a5ca"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Signature of Issuing Authority Associate Dean]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

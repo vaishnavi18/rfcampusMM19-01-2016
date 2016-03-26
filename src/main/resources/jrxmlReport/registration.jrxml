@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="headerMaster" pageWidth="595" pageHeight="842" columnWidth="525" leftMargin="50" rightMargin="20" topMargin="10" bottomMargin="20" uuid="d8eb4d00-a330-4427-9dfd-292cbfdd8192">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="New Dataset 1" uuid="3df4aa58-0ffd-44d2-b991-e4c0714508b2"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{SUBREPORT_DIR}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="meritListNamedataSource" class="java.lang.String"/>
+	<parameter name="dataSource" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="collegeName" class="java.lang.String"/>
+	<parameter name="collegeAddress" class="java.lang.String"/>
+	<parameter name="collegeSocietyName" class="java.lang.String"/>
+	<parameter name="id" class="java.lang.Integer"/>
+	<parameter name="applicationId" class="java.lang.String"/>
+	<parameter name="studentName" class="java.lang.String"/>
+	<parameter name="middleName" class="java.lang.String"/>
+	<parameter name="lastName" class="java.lang.String"/>
+	<parameter name="motherName" class="java.lang.String"/>
+	<parameter name="motherTongue" class="java.lang.String"/>
+	<parameter name="dob" class="java.util.Date"/>
+	<parameter name="gender" class="java.lang.String"/>
+	<parameter name="caste" class="java.lang.String"/>
+	<parameter name="category" class="java.lang.String"/>
+	<parameter name="natinality" class="java.lang.String"/>
+	<parameter name="country" class="java.lang.String"/>
+	<parameter name="state" class="java.lang.String"/>
+	<parameter name="district" class="java.lang.String"/>
+	<parameter name="city" class="java.lang.String"/>
+	<parameter name="pincode" class="java.lang.Integer"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="permanantTelephone" class="java.lang.String"/>
+	<parameter name="permanantTelephoneStd" class="java.lang.String"/>
+	<parameter name="mobile" class="java.lang.String"/>
+	<parameter name="email" class="java.lang.String"/>
+	<parameter name="sscMath" class="java.lang.Integer"/>
+	<parameter name="sscMathMax" class="java.lang.Integer"/>
+	<parameter name="sscTotal" class="java.lang.Integer"/>
+	<parameter name="sscOutOf" class="java.lang.Integer"/>
+	<parameter name="sscPassingYear" class="java.lang.String"/>
+	<parameter name="sscPercentage" class="java.lang.Double"/>
+	<parameter name="hscMath" class="java.lang.Integer"/>
+	<parameter name="hscMathmax" class="java.lang.Integer"/>
+	<parameter name="hscChemistry" class="java.lang.Integer"/>
+	<parameter name="hscChemMax" class="java.lang.Integer"/>
+	<parameter name="hscPhysics" class="java.lang.Integer"/>
+	<parameter name="hscPhyMax" class="java.lang.Integer"/>
+	<parameter name="hscPcm" class="java.lang.Integer"/>
+	<parameter name="hscPcmMax" class="java.lang.Integer"/>
+	<parameter name="hscTotal" class="java.lang.Integer"/>
+	<parameter name="hscPercentage" class="java.lang.Double"/>
+	<parameter name="hscPassingYear" class="java.lang.String"/>
+	<parameter name="hscOutOf" class="java.lang.Integer"/>
+	<parameter name="entranceExamId" class="java.lang.Integer"/>
+	<parameter name="entranceExamRank" class="java.lang.Integer"/>
+	<parameter name="entranceExamRollNo" class="java.lang.Integer"/>
+	<parameter name="entranceExamScore" class="java.lang.Integer"/>
+	<parameter name="entranceExamYear" class="java.lang.Integer"/>
+	<parameter name="admissionStatus" class="java.lang.String"/>
+	<parameter name="collegeLogo" class="java.lang.String"/>
+	<parameter name="photoLink" class="java.lang.String"/>
+	<parameter name="signatureLink" class="java.lang.String"/>
+	<title>
+		<band height="174" splitType="Stretch">
+			<line>
+				<reportElement x="2" y="71" width="531" height="1" uuid="bc68e998-9aca-4b59-bd4b-7dea942b218d"/>
+			</line>
+			<subreport isUsingCache="false" runToBottom="false">
+				<reportElement x="1" y="0" width="475" height="71" uuid="f7e549bf-a8e0-4d17-9522-0abcaccdb299"/>
+				<subreportParameter name="meritListNamedataSource">
+					<subreportParameterExpression><![CDATA[$P{meritListNamedataSource}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="collegeLogo">
+					<subreportParameterExpression><![CDATA[$P{collegeLogo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="collegeName">
+					<subreportParameterExpression><![CDATA[$P{collegeName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dataSource">
+					<subreportParameterExpression><![CDATA[$P{dataSource}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="collegeAddress">
+					<subreportParameterExpression><![CDATA[$P{collegeAddress}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "headerSubreport.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="false" runToBottom="false">
+				<reportElement x="1" y="73" width="475" height="100" uuid="ccd906d7-4c39-4f13-bab0-d28deaad97a7"/>
+				<subreportParameter name="motherTongue">
+					<subreportParameterExpression><![CDATA[$P{motherTongue}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="signatureLink">
+					<subreportParameterExpression><![CDATA[$P{signatureLink}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="hscTotal">
+					<subreportParameterExpression><![CDATA[$P{hscTotal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="hscPcmMax">
+					<subreportParameterExpression><![CDATA[$P{hscPcmMax}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="entranceExamRollNo">
+					<subreportParameterExpression><![CDATA[$P{entranceExamRollNo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="state">
+					<subreportParameterExpression><![CDATA[$P{state}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="applicationId">
+					<subreportParameterExpression><![CDATA[$P{applicationId}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="natinality">
+					<subreportParameterExpression><![CDATA[$P{natinality}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="caste">
+					<subreportParameterExpression><![CDATA[$P{caste}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="sscOutOf">
+					<subreportParameterExpression><![CDATA[$P{sscOutOf}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="hscPercentage">
+					<subreportParameterExpression><![CDATA[$P{hscPercentage}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="entranceExamRank">
+					<subreportParameterExpression><![CDATA[$P{entranceExamRank}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="city">
+					<subreportParameterExpression><![CDATA[$P{city}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="id">
+					<subreportParameterExpression><![CDATA[$P{id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="entranceExamYear">
+					<subreportParameterExpression><![CDATA[$P{entranceExamYear}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="sscMath">
+					<subreportParameterExpression><![CDATA[$P{sscMath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="gender">
+					<subreportParameterExpression><![CDATA[$P{gender}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="district">
+					<subreportParameterExpression><![CDATA[$P{district}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="hscChemMax">
+					<subreportParameterExpression><![CDATA[$P{hscChemMax}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="middleName">
+					<subreportParameterExpression><![CDATA[$P{middleName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="lastName">
+					<subreportParameterExpression><![CDATA[$P{lastName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="entranceExamId">
+					<subreportParameterExpression><![CDATA[$P{entranceExamId}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="sscPercentage">
+					<subreportParameterExpression><![CDATA[$P{sscPercentage}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="motherName">
+					<subreportParameterExpression><![CDATA[$P{motherName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="hscMathmax">
+					<subreportParameterExpression><![CDATA[$P{hscMathmax}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="sscMathMax">
+					<subreportParameterExpression><![CDATA[$P{sscMathMax}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="hscPassingYear">
+					<subreportParameterExpression><![CDATA[$P{hscPassingYear}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="entranceExamScore">
+					<subreportParameterExpression><![CDATA[$P{entranceExamScore}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="permanantTelephoneStd">
+					<subreportParameterExpression><![CDATA[$P{permanantTelephoneStd}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="hscPhysics">
+					<subreportParameterExpression><![CDATA[$P{hscPhysics}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="hscChemistry">
+					<subreportParameterExpression><![CDATA[$P{hscChemistry}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="permanantTelephone">
+					<subreportParameterExpression><![CDATA[$P{permanantTelephone}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="sscPassingYear">
+					<subreportParameterExpression><![CDATA[$P{sscPassingYear}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="country">
+					<subreportParameterExpression><![CDATA[$P{country}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="hscPhyMax">
+					<subreportParameterExpression><![CDATA[$P{hscPhyMax}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="pincode">
+					<subreportParameterExpression><![CDATA[$P{pincode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="category">
+					<subreportParameterExpression><![CDATA[$P{category}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="hscOutOf">
+					<subreportParameterExpression><![CDATA[$P{hscOutOf}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="admissionStatus">
+					<subreportParameterExpression><![CDATA[$P{admissionStatus}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="address">
+					<subreportParameterExpression><![CDATA[$P{address}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="email">
+					<subreportParameterExpression><![CDATA[$P{email}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dob">
+					<subreportParameterExpression><![CDATA[$P{dob}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="hscPcm">
+					<subreportParameterExpression><![CDATA[$P{hscPcm}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="sscTotal">
+					<subreportParameterExpression><![CDATA[$P{sscTotal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="studentName">
+					<subreportParameterExpression><![CDATA[$P{studentName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="photoLink">
+					<subreportParameterExpression><![CDATA[$P{photoLink}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="hscMath">
+					<subreportParameterExpression><![CDATA[$P{hscMath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="mobile">
+					<subreportParameterExpression><![CDATA[$P{mobile}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "student-registration-report_personalInfoSubReport.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</title>
+	<pageFooter>
+		<band height="17">
+			<textField evaluationTime="Report">
+				<reportElement x="484" y="1" width="40" height="15" uuid="bf3a0c22-8caa-417c-86af-2f75891f55d7"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="1" width="54" height="15" uuid="d4c3923f-81da-4ea0-958b-e9867556d320"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Print Date:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="54" y="1" width="99" height="15" uuid="ca2b6897-2481-40ec-9b1c-9005e08513a8"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="404" y="1" width="80" height="15" uuid="510a71fc-d1b7-4bf0-a8d7-3c283fdf7528"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

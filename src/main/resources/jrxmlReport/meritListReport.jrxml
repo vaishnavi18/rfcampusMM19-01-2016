@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="meritListReport" pageWidth="595" pageHeight="842" columnWidth="525" leftMargin="50" rightMargin="20" topMargin="15" bottomMargin="20" uuid="d45bec32-dfa5-4965-a7a1-5887db92ecbb">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{SUBREPORT_DIR}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="collegeName" class="java.lang.String"/>
+	<parameter name="collegeAddress" class="java.lang.String"/>
+	<parameter name="meritListNamedataSource" class="java.lang.String"/>
+	<parameter name="col1" class="java.lang.Boolean"/>
+	<parameter name="col2" class="java.lang.Boolean"/>
+	<parameter name="col5" class="java.lang.Boolean"/>
+	<parameter name="col8" class="java.lang.Boolean"/>
+	<parameter name="col11" class="java.lang.Boolean"/>
+	<parameter name="col14" class="java.lang.Boolean"/>
+	<parameter name="col16" class="java.lang.Boolean"/>
+	<parameter name="col17" class="java.lang.Boolean"/>
+	<parameter name="tableDataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="collegeLogo" class="java.lang.String"/>
+	<parameter name="IMAGE_PATH" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="207" splitType="Stretch">
+			<subreport>
+				<reportElement x="1" y="1" width="475" height="71" uuid="6c4f71cf-75d4-4f85-be4f-cb20442d33bc"/>
+				<subreportParameter name="collegeName">
+					<subreportParameterExpression><![CDATA[$P{collegeName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="IMAGE_PATH">
+					<subreportParameterExpression><![CDATA[$P{IMAGE_PATH}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="collegeAddress">
+					<subreportParameterExpression><![CDATA[$P{collegeAddress}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="collegeLogo">
+					<subreportParameterExpression><![CDATA[$P{collegeLogo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "headerSubreport.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement x="1" y="72" width="522" height="1" uuid="575a887a-4ed2-4a7f-97b3-bd2c6cedeac9"/>
+			</line>
+			<subreport>
+				<reportElement x="1" y="106" width="475" height="100" uuid="66c7cb62-8aa3-4071-a76d-17ee96afbd89"/>
+				<subreportParameter name="col5">
+					<subreportParameterExpression><![CDATA[$P{col5}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="col1">
+					<subreportParameterExpression><![CDATA[$P{col1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="col2">
+					<subreportParameterExpression><![CDATA[$P{col2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="col14">
+					<subreportParameterExpression><![CDATA[$P{col14}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="col11">
+					<subreportParameterExpression><![CDATA[$P{col11}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="col8">
+					<subreportParameterExpression><![CDATA[$P{col8}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="col17">
+					<subreportParameterExpression><![CDATA[$P{col17}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="col16">
+					<subreportParameterExpression><![CDATA[$P{col16}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="tableDataSource">
+					<subreportParameterExpression><![CDATA[$P{tableDataSource}.cloneDataSource()]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "tableSubReport.jasper"]]></subreportExpression>
+			</subreport>
+			<textField isBlankWhenNull="true">
+				<reportElement x="175" y="79" width="205" height="20" uuid="9d2f0a3c-a46a-4d1f-b395-7ecc529d9e35"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{meritListNamedataSource}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<subreport>
+				<reportElement x="1" y="0" width="524" height="20" uuid="9304a922-3a0e-4e55-9f03-030c06a4cea7"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "footerSubreport.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageFooter>
+</jasperReport>
