@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<mapping class="com.iitms.rfcampusdata.authentication.entity.UserMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.authentication.entity.RoleMasterEntity" />
+		<!-- <mapping class="com.iitms.rfcampusdata.authentication.entity.Menu" /> -->
+		<!-- <mapping class="com.iitms.rfcampusdata.authentication.entity.UserRoles" /> -->
+		<mapping class="com.iitms.rfcampusdata.authentication.entity.RoleMenuAllocationEntity" />
+		<mapping class="com.iitms.rfcampusdata.authentication.entity.ModuleMasterEntity" />
+		<!-- <mapping class="com.iitms.rfcampusdata.authentication.entity.MainMenuEntity" /> -->
+		<mapping class="com.iitms.rfcampusdata.authentication.entity.MenuMasterEntity" />
+		<!-- <mapping class="com.iitms.rfcampusdata.authentication.entity.Sample" /> -->
+		<mapping class="com.iitms.rfcampusdata.authentication.entity.CollegeMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.authentication.entity.SocietyMaster" />
+		<mapping class="com.iitms.rfcampusdata.authentication.entity.UniversityMaster" />
+		<mapping class="com.iitms.rfcampusdata.authentication.entity.RoleTypeMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.authentication.entity.RoleMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.authentication.entity.AddressMaster" />
+		<mapping class="com.iitms.rfcampusdata.authentication.entity.CollegeModuleMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.authentication.entity.UserRoleAllocationEntity" />
+		<mapping class="com.iitms.rfcampusdata.authentication.entity.UserAttemptsEntity" />
+		
+		<!-- <mapping class="com.iitms.rfcampusdata.authentication.entity.Society" /> -->
+		
+		<!--  Mapping Classes For Masters Module-->
+		
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.StudentAddressMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.StudentPhotoDetailsMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.LastQualifyingExamMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.BranchPrefrenceMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.CasteMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.StateMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.DistrictMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.CityMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.BloodGroupMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.NationalityMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.ReligionMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.CategoryMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.BatchMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.SemesterMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.DegreeMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.PaymentTypeMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.YearMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.StudentStatusMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.MothertongueMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.BankMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.PhysicallyHandicappedMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.DocumentListMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.OccupationMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.EducationMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.QualifyingExamTypeMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.SemesterMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.BranchMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.DepartmentMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.CategoryMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.QuotaMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.StateMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.PaymentTypeMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.StudentMeritListMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.CertificateMasterEntity"/> 
+		
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.AcademicRegistrationNumberFormatEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.AcademicRoomMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.AcademicShiftMasterEntity" />
+		
+		
+		<!--  Mapping Classes For Admission Module-->
+		<mapping class="com.iitms.rfcampusdata.academic.admission.entity.StudentAdmissionEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.admission.entity.TempStudentRegistrationEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.admission.entity.ExcelFileImportEntity" />
+		
+		<!--  Mapping Classes For Fee Module-->
+		<mapping class="com.iitms.rfcampusdata.academic.feecollection.entity.FeesReceiptTypeEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.feecollection.entity.FeesFeeheadEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.feecollection.entity.StandardFeeMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.feecollection.entity.FeesDemandCreationTransactionEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.feecollection.entity.FeesCounterMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.feecollection.entity.FeesUserCounterMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.feecollection.entity.FeesPaymentModeEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.feecollection.entity.FeesSessionCounterReferenceTransactionEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.feecollection.entity.FeesRefundMainTransaction" />
+		<mapping class="com.iitms.rfcampusdata.academic.feecollection.entity.FeesRefundFeeheadTransactionEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.feecollection.entity.FeesRefundReferenceTransactionEntity" />
+		
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.FamilyMemberDetailEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.AcademicSessionMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.admission.entity.AdmissionNotificationEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.DegreeTypeEntity" />
+		
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.StudentMeritListSortingEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.MeritListStoreMaster" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.MeritListTransactionEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.CountryMasterEntity" />
+		
+		<mapping class="com.iitms.rfcampusdata.academic.admission.entity.BranchPrefrenceEntity" />
+		
+		
+		<mapping class="com.iitms.rfcampusdata.academic.admission.entity.RegistrationNumberFormatEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.admission.entity.ReferenceFileEntity" />
+		
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.GenderMasterEntity" />
+
+		<mapping class="com.iitms.rfcampusdata.authentication.entity.ModuleMenuRow" />
+		
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.SelectedPropertiesMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.AcademicEventCateogryMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.AcademicFeedbackQuestionMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.AcademicHolidayMasterEntity" />
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.AcademicHolidayTypeMasterEntity" />
+		
+		<mapping class="com.iitms.rfcampusdata.authentication.entity.ModuleMenuRow" />
+		
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.MasterFields" />
+		
+		<!--  Mapping Classes For Payroll Module-->
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.LoanTypeMaster"/>
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.StaffTypeMaster"/>
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.SupplementaryHeadMaster"/>
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.QualificationLevelMaster"/>
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.NomineeTypeMaster"/>
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.EmployeeMasterEntity"/>
+		
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.PayrollCasteMasterEntity"/>
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.PayrollCategoryMasterEntity"/>
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.PayrollGenderMasterEntity"/>
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.PayrollNationalityMasterEntity"/>
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.PayrollTitleMaster"/>
+		<!-- <mapping class="com.iitms.rfcampusdata.payroll.masters.entity.PayrollStaffTypeMaster"/> -->
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.PayrollSubdesignationMaster"/>
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.PayrollDesignationMaster"/>
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.PayrollDesignationMaster"/>
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.AppointmentTypeMasterEntity"/>
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.PayrollBankMasterEntity"/>
+		
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.PayruleMaster"/>
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.PayscaleMaster"/>
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.ProvidentFundMasterEntity"/>
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.PayrollDepartmentMasterEntity"/>
+		<mapping class="com.iitms.rfcampusdata.payroll.masters.entity.StaffMasterEntity"/>
+		
+		
+		
+		<!-- Mapping Classes For Store Module -->
+		<mapping class="com.iitms.rfcampusdata.store.masters.entity.ApprovalLevelMaster"/>
+		<mapping class="com.iitms.rfcampusdata.store.masters.entity.FinancialYearMaster"/>
+		
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.SubjectTypeMasterEntity"/>
+		<mapping class="com.iitms.rfcampusdata.academic.masters.entity.IdTypeMasterEntity"/>
+		
+	</session-factory>
+</hibernate-configuration>
